@@ -55,4 +55,19 @@ pass: rootpass
 sh service-lampp.sh
 ```
 
+## 6. Opsional (Rewrite Server)
+#### PHP7
+```
+docker exec -it lampp7-php7.4 bash
+a2enmod rewrite && service apache2 restart  ## ENABLE
+a2dismod rewrite && service apache2 restart  ## ENABLE
+```
+
+#### PHP8
+```
+docker exec -it lampp8-php8.0 bash
+a2enmod rewrite && service apache2 restart  ## ENABLE
+a2dismod rewrite && service apache2 restart  ## ENABLE
+```
+
 
