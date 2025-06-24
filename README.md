@@ -74,7 +74,13 @@ a2dismod rewrite && service apache2 restart  ## DISABLE
 ```
 
 ## 7. Koneksi database PHP - MySQL/MariaDB
+
 ##### <i>Contoh File Lengkap : tes-koneksi-database.php </i>
+```
+cp tes-koneksi-database-lampp7.php /root/PROJECT/lampp7.4/ && \
+cp tes-koneksi-database-lampp8.php /root/PROJECT/lampp8.0/ 
+```
+
 #### PHP7-MySQL
 ```
 $host = 'mysql';      // atau 'mariadb' jika pakai mengarah ke container MySQL - PHP7.4 
