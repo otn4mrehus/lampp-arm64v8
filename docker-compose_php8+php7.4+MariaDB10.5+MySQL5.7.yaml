@@ -9,7 +9,7 @@ services:
       - "2000:80"
       - "2022:22"
     volumes:
-      - ./www:/var/www/html
+      - /root/PROJECT/lampp7.4/www:/var/www/html:rw
     depends_on:
       - db
     mem_limit: 256m
@@ -25,7 +25,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
-      - ./mysql:/var/lib/mysql
+      - /root/PROJECT/lampp7.4/mysql:/var/lib/mysql
     mem_limit: 256m
     cpus: 1.0
 
@@ -50,7 +50,7 @@ services:
       - "3000:80"
       - "3022:22"
     volumes:
-      - ./www:/var/www/html
+      - /root/PROJECT/lampp8.0/www:/var/www/html:rw
     depends_on:
       - mariadb
     mem_limit: 256m
@@ -62,11 +62,11 @@ services:
       - "3222:22"
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: langgar69
+      MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
-      - ./mariadb:/var/lib/mysql
+      - /root/PROJECT/lampp8.0/mariadb:/var/lib/mysql
     mem_limit: 256m
     cpus: 1.0
 
