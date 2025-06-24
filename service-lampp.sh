@@ -56,7 +56,7 @@ while true; do
                         ;;
                     5)
                         echo "Mengaktifkan SSH di lampp-php7.4..."
-                        docker exec -it lampp-php7.4 bash -c 'echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && echo "root:toor" | chpasswd && service ssh restart'
+                        docker exec -it lampp-php7.4 bash -c 'echo "apt -y update && apt -y install openssh-server && PermitRootLogin yes" >> /etc/ssh/sshd_config && echo "root:toor" | chpasswd && service ssh restart'
                         ;;
                     0)
                         break
@@ -91,7 +91,7 @@ while true; do
                         ;;
                     5)
                         echo "Mengaktifkan SSH di lampp-php8.0..."
-                        docker exec -it lampp-php8.0 bash -c 'echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && echo "root:toor" | chpasswd && service ssh restart'
+                        docker exec -it lampp-php8.0 bash -c 'echo "apt -y update && apt -y install openssh-server &&  PermitRootLogin yes" >> /etc/ssh/sshd_config && echo "root:toor" | chpasswd && service ssh restart'
                         ;;
                     0)
                         break
