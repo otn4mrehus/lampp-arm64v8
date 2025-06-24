@@ -31,8 +31,28 @@ sh service-lampp.sh
 ```
 
 #### Opsional
-````
+```
 2022 : Akses SSH Container PHP7.4
 3022 : Akses SSH Container PHP8.0
-2222 : Akses SSH Container MySQL
-3222 : Akses SSH Container MariaDB
+```
+
+## Login
+#### SSH
+```
+Container PHP7 / PHP8
+user: root
+pass: toor
+```
+#### PHPMyAdmin
+```
+Container PHP7 / PHP8
+user: root
+pass: rootpass
+```
+
+## Menu Admin (Otomatis)
+```
+sh service-lampp.sh
+```
+
+
