@@ -20,7 +20,7 @@ services:
     container_name: lampp-mysql5.7
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: langgar69
+      MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
