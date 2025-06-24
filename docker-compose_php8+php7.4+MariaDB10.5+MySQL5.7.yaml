@@ -4,7 +4,7 @@ services:
   web:
     image: arm64v8/php:7.4-apache
     hostname: lampp-php7.4
-    container_name: lampp-php7.4
+    container_name: lampp7-php7.4
     ports:
       - "2000:80"
       - "2022:22"
@@ -17,7 +17,7 @@ services:
 
   db:
     image: bitnami/mysql:5.7
-    container_name: lampp-mysql5.7
+    container_name: lampp7-mysql5.7
     ports:
       - "2222:22"
     restart: unless-stopped
@@ -26,13 +26,13 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
-      - /root/PROJECT/lampp7.4/mysql:/var/lib/mysql
+      - /root/PROJECT/lampp7.4/mysql:/var/lib/mysql:rw
     mem_limit: 256m
     cpus: 1.0
 
   phpmyadmin:
     image: arm64v8/phpmyadmin
-    container_name: lampp-phpmyadmin-mysql5.7
+    container_name: lampp7-phpmyadmin-mysql5.7
     restart: unless-stopped
     depends_on:
       - db
@@ -46,7 +46,7 @@ services:
   web8:
     image: arm64v8/php:8.0-apache
     hostname: lampp-php8.0
-    container_name: lampp-php8.0
+    container_name: lampp8-php8.0
     ports:
       - "3000:80"
       - "3022:22"
@@ -59,7 +59,7 @@ services:
 
   mariadb:
     image: arm64v8/mariadb:10.5
-    container_name: lampp-mariadb10.5
+    container_name: lampp8-mariadb10.5
     ports:
       - "3222:22"
     restart: unless-stopped
@@ -68,13 +68,13 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
-      - /root/PROJECT/lampp8.0/mariadb:/var/lib/mysql
+      - /root/PROJECT/lampp8.0/mariadb:/var/lib/mysql:rw
     mem_limit: 256m
     cpus: 1.0
 
   phpmyadmin8:
     image: arm64v8/phpmyadmin
-    container_name: lampp-phpmyadmin-mariadb10.5
+    container_name: lampp8-phpmyadmin-mariadb10.5
     restart: unless-stopped
     depends_on:
       - mariadb
