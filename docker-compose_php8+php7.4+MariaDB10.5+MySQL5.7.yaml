@@ -2,7 +2,10 @@ version: '2.2'
 
 services:
   web:
-    image: arm64v8/php:7.4-apache
+    #image: arm64v8/php:7.4-apache
+    build:
+      context: ./lampp7
+      dockerfile: Dockerfile
     hostname: lampp-php7.4
     container_name: lampp7-php7.4
     ports:
@@ -44,7 +47,10 @@ services:
     cpus: 1.0
 
   web8:
-    image: arm64v8/php:8.0-apache
+    #image: arm64v8/php:8.0-apache
+    build:
+      context: ./lampp8
+      dockerfile: Dockerfile
     hostname: lampp-php8.0
     container_name: lampp8-php8.0
     ports:
