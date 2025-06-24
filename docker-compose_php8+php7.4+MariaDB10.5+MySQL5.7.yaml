@@ -33,7 +33,7 @@ services:
     mem_limit: 256m
     cpus: 1.0
 
-  phpmyadmin:
+  phpmyadmin7:
     image: arm64v8/phpmyadmin
     container_name: lampp7-phpmyadmin-mysql5.7
     restart: unless-stopped
