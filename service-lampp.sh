@@ -40,15 +40,15 @@ while true; do
                 case $aksi7 in
                     1)
                         echo "Menjalankan PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
-                        docker-compose -f "$COMPOSE_FILE" -p 'lampp7' up --build -d web db phpmyadmin
+                        docker-compose -f "$COMPOSE_FILE" -p 'lampp7' up --build -d web7 mysql phpmyadmin7
                         ;;
                     2)
                         echo "Menghentikan PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
-                        docker-compose -f "$COMPOSE_FILE" -p 'lampp7' stop web db phpmyadmin
+                        docker-compose -f "$COMPOSE_FILE" -p 'lampp7' stop web7 mysql phpmyadmin7
                         ;;
                     3)
                         echo "Restart PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
-                        docker-compose -f "$COMPOSE_FILE" -p 'lampp7' restart web db phpmyadmin
+                        docker-compose -f "$COMPOSE_FILE" -p 'lampp7' restart web7 mysql phpmyadmin7
                         ;;
                     4)
                         echo "Down (stop & hapus kontainer/volume) PHP 7.4 + MySQL 5.7..."
