@@ -73,4 +73,20 @@ a2enmod rewrite && service apache2 restart  ## ENABLE
 a2dismod rewrite && service apache2 restart  ## DISABLE
 ```
 
+## 7. Koneksi database PHP - MySQL/MariaDB
+##### <i>Contoh File Lengkap : tes-koneksi-database.php </i>
+#### PHP7-MySQL
+```
+$host = 'mysql';      // atau 'mariadb' jika pakai mengarah ke container MySQL - PHP7.4 
+$dbname = 'mysql';
+$username = 'root';
+$password = 'toor';
+```
 
+#### PHP8-MariaDB
+```
+$host = 'mariadb';      // atau 'mariadb' jika pakai mengarah ke container MySQL - PHP7.4 
+$dbname = 'mysql';
+$username = 'root';
+$password = 'toor';
+```
