@@ -1,7 +1,7 @@
 version: '2.2'
 
 services:
-  web:
+  web7:
     #image: arm64v8/php:7.4-apache
     build:
       context: ./lampp7
@@ -14,18 +14,18 @@ services:
     volumes:
       - /root/PROJECT/lampp7.4/www:/var/www/html:rw
     depends_on:
-      - db
+      - mysql
     mem_limit: 256m
     cpus: 1.0
 
-  db:
+  mysql:
     image: bitnami/mysql:5.7
     container_name: lampp7-mysql5.7
     ports:
       - "2222:22"
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_ROOT_PASSWORD: toor
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
@@ -38,11 +38,11 @@ services:
     container_name: lampp7-phpmyadmin-mysql5.7
     restart: unless-stopped
     depends_on:
-      - db
+      - mysql
     ports:
       - "2001:80"
     environment:
-      PMA_HOST: db
+      PMA_HOST: mysql
     mem_limit: 256m
     cpus: 1.0
 
@@ -70,7 +70,7 @@ services:
       - "3222:22"
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_ROOT_PASSWORD: toor
       MYSQL_USER: user
       MYSQL_PASSWORD: userpass
     volumes:
