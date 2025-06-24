@@ -15,7 +15,7 @@ submenu_php7() {
     echo "2. Stop"
     echo "3. Restart"
     echo "4. Down (stop & hapus kontainer/volume)"
-    echo "5. Aktifkan SSH (PermitRootLogin) di PHP 7.4"
+    echo "5. Aktifkan SSH di PHP 7.4"
     echo "0. Kembali"
 }
 
@@ -25,7 +25,7 @@ submenu_php8() {
     echo "2. Stop"
     echo "3. Restart"
     echo "4. Down (stop & hapus kontainer/volume)"
-    echo "5. Aktifkan SSH (PermitRootLogin) di PHP 8.0"
+    echo "5. Aktifkan SSH di PHP 8.0"
     echo "0. Kembali"
 }
 
@@ -56,7 +56,7 @@ while true; do
                         ;;
                     5)
                         echo "Mengaktifkan SSH di lampp-php7.4..."
-                        docker exec -it lampp-php7.4 bash -c 'echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && echo "roottoor1" | chpasswd && service ssh restart'
+                        docker exec -it lampp-php7.4 bash -c 'echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && echo "root:toor" | chpasswd && service ssh restart'
                         ;;
                     0)
                         break
