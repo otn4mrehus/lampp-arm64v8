@@ -21,27 +21,27 @@ while true; do
     case $pilihan in
         1)
             echo "Menjalankan PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
-            docker-compose -f "$COMPOSE_FILE" -p 'lampp7.4' up -d web db phpmyadmin
+            docker-compose -f '$COMPOSE_FILE' -p 'lampp7.4' up -d web db phpmyadmin
             ;;
         2)
             echo "Menghentikan PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
-            docker-compose -f "$COMPOSE_FILE" -p 'lampp7.4' stop web db phpmyadmin
+            docker-compose -f '$COMPOSE_FILE' -p 'lampp7.4' stop web db phpmyadmin
             ;;
         3)
             echo "Restart PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
-            docker-compose -f "$COMPOSE_FILE" -p 'lampp7.4' restart web db phpmyadmin
+            docker-compose -f '$COMPOSE_FILE' -p 'lampp7.4' restart web db phpmyadmin
             ;;
         4)
             echo "Menjalankan PHP 8 + MariaDB 10.5 + phpMyAdmin..."
-            docker-compose -f "$COMPOSE_FILE" -p 'lampp8.0' up -d web8 mariadb phpmyadmin8
+            docker-compose -f '$COMPOSE_FILE' -p 'lampp8.0' up -d web8 mariadb phpmyadmin8
             ;;
         5)
             echo "Menghentikan PHP 8 + MariaDB 10.5 + phpMyAdmin..."
-            docker-compose -f "$COMPOSE_FILE" -p 'lampp8.0' stop web8 mariadb phpmyadmin8
+            docker-compose -f '$COMPOSE_FILE' -p 'lampp8.0' stop web8 mariadb phpmyadmin8
             ;;
         6)
             echo "Restart PHP 8 + MariaDB 10.5 + phpMyAdmin..."
-            docker-compose -f "$COMPOSE_FILE" -p 'lampp8.0' restart web8 mariadb phpmyadmin8
+            docker-compose -f '$COMPOSE_FILE' -p 'lampp8.0' restart web8 mariadb phpmyadmin8
             ;;
         0)
             echo "Keluar."
