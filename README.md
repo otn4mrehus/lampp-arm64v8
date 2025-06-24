@@ -1,2 +1,3 @@
-# lampp-arm64v8
+# LAMPP-ARM64 STB
 LAMPP Armbian 64 Bit | STB-B680H v2.1
+
