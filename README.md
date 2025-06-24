@@ -47,7 +47,10 @@ pass: toor
 ```
 Container PHP7 / PHP8
 user: root
-pass: rootpass
+pass: toor
+
+user: user
+pass: userpass
 ```
 
 ## 5. Menu Admin (Otomatis)
