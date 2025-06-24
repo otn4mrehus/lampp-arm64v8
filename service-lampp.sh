@@ -4,13 +4,13 @@ COMPOSE_FILE="docker-compose_php8+php7.4+MariaDB10.5+MySQL5.7.yaml"
 
 menu() {
 echo "=== PILIH ENVIRONMENT LAMPP ==="
-echo "1. Start PHP 7.4 + MySQL 5.7"
+echo "1. Instalasi Container PHP 7.4 + MySQL 5.7"
 echo "2. Stop  PHP 7.4 + MySQL 5.7"
-echo "3. Restart PHP 7.4 + MySQL 5.7"
+echo "3. Start PHP 7.4 + MySQL 5.7"
 echo "----------------------------"
-echo "4. Start PHP 8 + MariaDB 10.5"
+echo "4. Instalasi Container PHP 8 + MariaDB 10.5"
 echo "5. Stop  PHP 8 + MariaDB 10.5"
-echo "6. Restart PHP 8 + MariaDB 10.5"
+echo "6. Start PHP 8 + MariaDB 10.5"
 echo "----------------------------"
 echo "0. Keluar"
 }
