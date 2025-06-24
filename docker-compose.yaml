@@ -29,3 +29,19 @@ services:
       - ./mysql:/var/lib/mysql
     mem_limit: 256m
     cpus: 1.0
+  phpmyadmin:
+    image: arm64v8/phpmyadmin
+    container_name: lampp-phpmyadmin5.2.2
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8091:80"
+    environment:
+      PMA_HOST: db
+      #PMA_USER: root
+      #PMA_PASSWORD: rootpass
+    mem_limit: 256m
+    cpus: 1.0
+
+
