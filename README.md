@@ -60,14 +60,14 @@ sh service-lampp.sh
 ```
 docker exec -it lampp7-php7.4 bash
 a2enmod rewrite && service apache2 restart  ## ENABLE
-a2dismod rewrite && service apache2 restart  ## ENABLE
+a2dismod rewrite && service apache2 restart  ## DISABLE
 ```
 
 #### PHP8
 ```
 docker exec -it lampp8-php8.0 bash
 a2enmod rewrite && service apache2 restart  ## ENABLE
-a2dismod rewrite && service apache2 restart  ## ENABLE
+a2dismod rewrite && service apache2 restart  ## DISABLE
 ```
 
 
