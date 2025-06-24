@@ -18,6 +18,7 @@ services:
   db:
     image: bitnami/mysql:5.7
     container_name: lampp-mysql5.7
+    ports:
       - "2222:22"
     restart: unless-stopped
     environment:
@@ -59,6 +60,7 @@ services:
   mariadb:
     image: arm64v8/mariadb:10.5
     container_name: lampp-mariadb10.5
+    ports:
       - "3222:22"
     restart: unless-stopped
     environment:
