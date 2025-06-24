@@ -1,0 +1,31 @@
+### docker-compose.yaml                                                                        
+version: '2.2'
+
+services:
+  web:
+    image: arm64v8/php:7.4-apache
+    hostname: lampp-php7.4
+    container_name: lampp-php7.4
+    ports:
+      - "8090:80"
+      - "8022:22"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+    mem_limit: 256m
+    cpus: 1.0
+
+  db:
+    image: bitnami/mysql:5.7  #arm64v8/mysql:5.7
+    container_name: lampp-mysql5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: langgar69
+      #MYSQL_DATABASE: myapp
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
+    volumes:
+      - ./mysql:/var/lib/mysql
+    mem_limit: 256m
+    cpus: 1.0
