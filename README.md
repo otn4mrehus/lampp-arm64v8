@@ -3,7 +3,7 @@ LAMPP Armbian 64 Bit | STB-B680H v2.1
 ## Download
 ```
 git clone https://github.com/otn4mrehus/lampp-arm64v8.git
-cd lampp-arm64v
+cd lampp-arm64v8
 ```
 ## Run Container
 ```
