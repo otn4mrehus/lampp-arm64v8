@@ -3,6 +3,9 @@ version: '2.2'
 
 services:
   web:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: arm64v8/php:7.4-apache
     hostname: lampp-php7.4
     container_name: lampp-php7.4
