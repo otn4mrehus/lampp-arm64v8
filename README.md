@@ -5,6 +5,8 @@ LAMPP Armbian 64 Bit | STB-B680H v2.1
 git clone https://github.com/otn4mrehus/lampp-arm64v8.git
 cd lampp-arm64v8
 ```
+#### Rename Dockerfile_7.4 dengan Dockerfile -> Ketika akan digunakan untuk PHP7.4 atau  
+#### Rename Dockerfile_8.0 dengan Dockerfile -> Ketika akan digunakan untuk PHP8.0 atau  
 ## 2. Run Container
 ```
 sh service-lampp.sh
