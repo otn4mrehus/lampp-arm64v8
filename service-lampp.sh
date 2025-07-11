@@ -40,6 +40,8 @@ while true; do
                 case $aksi7 in
                     1)
                         echo "Menjalankan PHP 7.4 + MySQL 5.7 + phpMyAdmin..."
+                        [ -f Dockerfile ] && rm Dockerfile
+                        cp Dockerfile_7.4 Dockerfile
                         docker-compose -f "$COMPOSE_FILE" -p 'lampp7' up --build -d web7 mysql phpmyadmin7
                         ;;
                     2)
@@ -75,6 +77,8 @@ while true; do
                 case $aksi8 in
                     1)
                         echo "Menjalankan PHP 8 + MariaDB 10.5 + phpMyAdmin..."
+                        [ -f Dockerfile ] && rm Dockerfile
+                        cp Dockerfile_8.0 Dockerfile 
                         docker-compose -f "$COMPOSE_FILE" -p 'lampp8' up --build -d web8 mariadb phpmyadmin8
                         ;;
                     2)
