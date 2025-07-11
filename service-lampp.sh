@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPOSE_FILE="docker-compose_php8+php7.4+MariaDB10.5+MySQL5.7.yaml"
+COMPOSE_FILE="docker-compose_all_php8+php7.4+MariaDB10.5+MySQL5.7.yaml"
 
 menu() {
     echo "=== MENU LAMPP DOCKER ==="
